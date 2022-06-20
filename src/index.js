@@ -1,14 +1,17 @@
-import React from 'react';
+import * as React from 'react';
 import ReactDOM from 'react-dom/client';
 import { useState, useEffect } from "react";
 import { db } from './firebase'
 import { collection, getDocs } from "firebase/firestore";
+import CssBaseline from '@mui/material/CssBaseline';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
 root.render(
-  <React.StrictMode>
+  <React.Fragment>
+    <CssBaseline />
     <App />
-  </React.StrictMode>
+  </React.Fragment>
 );
 
 function App() {
